@@ -1,0 +1,52 @@
+/*---------- Include Variables ----------*/
+@import "../helpers/_variables";
+
+/*------------------------------------- Start Navbar -------------------------------------*/
+.navbar {
+  /*------- Navbar logo --------*/
+  .navbar-brand > img { width: 30px; height: 30px }
+
+  /*------- Navbar Toggle Button --------*/
+  button:focus { box-shadow: none }
+  
+  /*------- Navbar Item --------*/
+  .nav-item {
+    // Navbar link
+    .nav-link {
+      position: relative;
+      &::before { content:""; position: absolute; left: 0; bottom: -13px; width: 0; height: 3px; background: $red; transition: all .3s ease-in-out; }
+
+      &.active, &:hover {
+        color: $red !important;
+        &::before { width: 100% }
+      }
+    }
+
+    // dropdown link
+    .dropdown-item {
+      transition: all .3s ease-in-out;
+      &.active, &:hover { background: $red; padding-left: 30px }
+    }
+
+  }
+  //------------- Tablet & Phone Screen --------
+  @media (max-width: 991px) {
+    .nav-item .nav-link {
+      &::before { bottom: 0 }
+    }
+    .dropdown-menu.show {
+      border: none;
+      text-align: center;
+      .dropdown-item.active, .dropdown-item:hover { padding-left: 0.25rem 1rem; }
+    }
+    .navbar-collapse {
+      position: absolute;
+      z-index: 999;
+      background: white;
+      width: 100%;
+      top: 67px;
+      left: 0px;
+    }
+  }
+}
+/*------------------------------------- End Navbar -------------------------------------*/

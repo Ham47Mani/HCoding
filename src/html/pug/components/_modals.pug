@@ -1,0 +1,13 @@
+// --- Mixin for add modal video
+mixin videoModal
+  // ================================== Start Video Modal ==================================
+  #videoModal.modal.fade 
+    .modal-dialog.modal-fullscreen
+      .modal-content 
+        .modal-header 
+          p.modal-title.h5 Modal Title 
+          button.btn-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          object.w-100(data="https://www.youtube.com/embed/jzSQL6l5Fjc") 
+  // ================================== End Video Modal ==================================
+

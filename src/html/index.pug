@@ -1,0 +1,366 @@
+extends pug/helpers/_pageStructore
+
+//-
+  =======================================================
+  In this a block for including page or anythings
+  =======================================================
+block includes
+  include pug/helpers/_helpers
+
+//-
+  =======================================================
+  In this a block we can create a variables for this page
+  =======================================================
+block variables
+
+//-
+  =======================================================
+  In this a block for add CSS file for this page
+  =======================================================
+block stylesheet
+  link(rel="stylesheet", href="css/bootstrap-icons.css")
+  link(rel="stylesheet", href="css/lightGallery.css")
+  link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+  link(rel="stylesheet", href="css/main.css")
+  
+prepend stylesheet 
+  +pageTitle(homePage)
+  //- Add a logo icon for title bar
+  link(rel="shortcut icon", href="./imgs/logo.png", type="image/x-icon")
+
+
+//-
+  ====================================================================================================================
+                                              In this a block for page content
+  ====================================================================================================================
+block content 
+    //- Include Navbar
+    include pug/layout/_navbar
+
+    // ================================== Start Header ==================================
+    header#header.position-relative
+      .container.h-100.d-flex.align-items-center
+        .position-relative
+          h3.display-4(data-aos="fade-right", data-aos-duration="2000")
+            | Welcome to 
+            span.text-danger HCoding
+          h6.fs-3.text-muted(data-aos="fade-left", data-aos-duration="2000")
+            | We are team of talented designers making a websites with boostrap
+          .btn-group.mt-3(data-aos="fade-up", data-aos-duration="2000")
+            button.btn.btn-danger.py-2.px-4.me-3 Get Started
+            button.btn.btn-outline-danger.py-2.px-4.me-3(data-bs-toggle="modal", data-bs-target="#videoModal") 
+              i.bi.bi-play-circle.me-2
+              | Watch video
+        
+    // ================================== End Header ==================================
+
+    //- Include Modal
+    include pug/components/_modals
+    +videoModal
+
+    // ================================== Start About us ==================================
+    section#about.bg-section.py-5
+      .container 
+        .text-center
+          span.title-before.text-upeercase.d-inline-block.mb-3.text-danger.px-3.rounded-pill About
+          h3.display-6
+            | Find Out More 
+            span.text-danger About Us
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.
+        .row.mt-5 
+          .col-lg-6.mb-3.mb-lg-0(data-aos="fade-right", data-aos-duration="1000")
+            img.img-fluid.img-thumbnail(src="imgs/about.jpg", alt="About images")
+          .col-lg-6(data-aos="fade-left", data-aos-duration="1000", data-aos-delay="500")
+            h4 Voluptatem dignissimo provident quasi corporis voluptates sit assumenda.
+            p.mt-3.fst-italic Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint tempore vitae veniam iure eum magni commodi optio, animi quas.
+            ul.list-unstyled.mt-5
+              li.d-flex.mb-4
+                .icon-container.bg-body.shadow.d-flex.justify-content-center.align-items-center.rounded-circle.flex-shrink-0.img-thumbnail.me-3
+                  i.bi.bi-journal-richtext.fs-2.text-danger
+                .text
+                  h5 Ullamco laboris nisit ut aliquip consequat 
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum veniam nulla?
+              li.d-flex.mb-4
+                .icon-container.bg-body.shadow.d-flex.justify-content-center.align-items-center.rounded-circle.flex-shrink-0.img-thumbnail.me-3
+                  i.bi.bi-book.fs-2.text-danger
+                .text
+                  h5 Ullamco laboris nisit ut aliquip consequat 
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum veniam nulla?
+
+    // ================================== End About us ==================================
+
+    // ================================== Start Skills ==================================
+    section#skills.skills.py-5
+      .container 
+        .row 
+          // Progress Bar 1
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b HTML 
+              b.progress-value 
+                span 40
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="40", aria-valuemax="100", aria-valuemin="0")
+          // Progress Bar 2
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b CSS
+              b.progress-value 
+                span 50
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="50", aria-valuemax="100", aria-valuemin="0")
+          // Progress Bar 3
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b Javascript
+              b.progress-value 
+                span 60
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="60", aria-valuemax="100", aria-valuemin="0")
+          // Progress Bar 4
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b PHP
+              b.progress-value 
+                span 70
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="70", aria-valuemax="100", aria-valuemin="0")
+          // Progress Bar 5
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b Wordpress
+              b.progress-value 
+                span 80
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="80", aria-valuemax="100", aria-valuemin="0")
+          // Progress Bar 6
+          .col-md-6.mb-4
+            // Progress indicator (Info)
+            .progress-info.d-flex.justify-content-between.mb-2
+              b Photoshop
+              b.progress-value 
+                span 90
+                | %
+            // Progress
+            .progress
+              .progress-bar.progress-bar-striped.bg-danger.progress-bar-animated(role="progressbar", aria-valuenow="90", aria-valuemax="100", aria-valuemin="0")
+
+    // ================================== End Skills ==================================
+
+    // ================================== Start Statistcis ==================================
+    section#statistics.statistics.py-5
+      .container 
+        .row 
+          // Stat 1
+          .col-md-6.col-lg-3.mb-5 
+            .bg-section.p-5.text-center.position-relative
+              .icon.bg-danger.d-flex.justify-content-center.align-items-center.position-absolute.top-0.start-50.translate-middle.rounded-circle
+                i.bi.bi-emoji-smile.fs-3.text-light
+              p.h3(data-counter="110") 0
+              p.h4 Happy Client
+          // Stat 2
+          .col-md-6.col-lg-3.mb-5 
+            .bg-section.p-5.text-center.position-relative
+              .icon.bg-danger.d-flex.justify-content-center.align-items-center.position-absolute.top-0.start-50.translate-middle.rounded-circle
+                i.bi.bi-journal-richtext.fs-3.text-light
+              p.h3(data-counter="120") 0
+              p.h4 Project
+          // Stat 3
+          .col-md-6.col-lg-3.mb-5 
+            .bg-section.p-5.text-center.position-relative
+              .icon.bg-danger.d-flex.justify-content-center.align-items-center.position-absolute.top-0.start-50.translate-middle.rounded-circle
+                i.bi.bi-headset.fs-3.text-light
+              p.h3(data-counter="24") 0
+              p.h4 Hours Of Support
+          // Stat 4
+          .col-md-6.col-lg-3.mb-5 
+            .bg-section.p-5.text-center.position-relative
+              .icon.bg-danger.d-flex.justify-content-center.align-items-center.position-absolute.top-0.start-50.translate-middle.rounded-circle
+                i.bi.bi-people.fs-3.text-light
+              p.h3(data-counter="15") 0
+              p.h4 Hard Workers
+    // ================================== End Statistcis ==================================
+
+    // ================================== Start Sponsore ==================================
+    section#sponssor.sponsore.py-5.bg-section
+      .container 
+        .row(data-aos="fade-up", data-aos-duration="1500")
+          // Sponsore 1
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-1.png", alt="Client 1")
+          // Sponsore 2
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-2.png", alt="Client 2")
+          // Sponsore 3
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-3.png", alt="Client 3")
+          // Sponsore 4
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-4.png", alt="Client 4")
+          // Sponsore 5
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-5.png", alt="Client 5")
+          // Sponsore 6
+          .col-lg-2.col-md-4.col-6.p-5
+            img.img-fluid(src="imgs/clients/client-6.png", alt="Client 6")
+    // ================================== End Sponsore ==================================
+
+    // ================================== Start Testimonials ==================================
+    section#testimonials.testimonials.position-relative
+      .container
+        #slider.carousel.slide.py-5(data-bs-ride="carousel")
+          .carousel-indicators
+            button.active(type="button", data-bs-target="#slider", data-bs-slide-to="0", aria-current="true", aria-label="Slide 1")
+            button(type="button", data-bs-target="#slider", data-bs-slide-to="1", aria-current="true", aria-label="Slide 2")
+            button(type="button", data-bs-target="#slider", data-bs-slide-to="2", aria-current="true", aria-label="Slide 3")
+          .carousel-inner.h-100
+            // Testim 1
+            .carousel-item.h-100.active 
+              img.d-block.mx-auto.rounded-circle(src="imgs/testimonials/testimonials-1.jpg", alt="Testim 1")
+              .carousel-caption.d-none.d-md-block 
+                p.h5 Fisrt Slide Label 
+                p Some representative placeholder content for the first slide.
+            // Testim 2
+            .carousel-item.h-100
+              img.d-block.mx-auto.rounded-circle(src="imgs/testimonials/testimonials-2.jpg", alt="Testim 2")
+              .carousel-caption.d-none.d-md-block 
+                p.h5 Second Slide Label 
+                p Some representative placeholder content for the Second slide.
+            // Testim 3
+            .carousel-item.h-100
+              img.d-block.mx-auto.rounded-circle(src="imgs/testimonials/testimonials-3.jpg", alt="Testim 3")
+              .carousel-caption.d-none.d-md-block 
+                p.h5 Third Slide Label 
+                p Some representative placeholder content for the Third slide.
+            button.carousel-control-prev(type="button", data-bs-target="#slider", data-bs-slide="prev")
+              span.carousel-control-prev-icon(aria-hidden="true") 
+              span.visually-hidden Privious
+            button.carousel-control-next(type="button", data-bs-target="#slider", data-bs-slide="next")
+              span.carousel-control-next-icon(aria-hidden="true") 
+              span.visually-hidden Next
+            
+    // ================================== End Testimonials ==================================
+
+    // ================================== Start Portfolios ==================================
+    section#portfolios.portfolios.py-5
+      .container
+        .text-center
+            span.title-before.text-upeercase.d-inline-block.mb-3.text-danger.px-3.rounded-pill Services
+            h3.display-6
+              | !Check Our Services
+              span.text-danger Services
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.
+        ul.list-group.list-group-horizontal.justify-content-center(data-aos="fade-in", data-aos-duration="1500")
+          li.list-group-item.active(data-filter="all") All 
+          li.list-group-item(data-filter="app") App
+          li.list-group-item(data-filter="photo") Photo
+          li.list-group-item(data-filter="web") Web
+        #portfoliosGallery.row.filter-items.mt-4
+          // Item 1
+          a.col-md-6.col-lg-4.mb-3.app(href="imgs/portfolio/portfolio-1.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-1.jpg", alt="")
+          // Item 2
+          a.col-md-6.col-lg-4.mb-3.photo(href="imgs/portfolio/portfolio-2.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-2.jpg", alt="")
+          // Item 3
+          a.col-md-6.col-lg-4.mb-3.app(href="imgs/portfolio/portfolio-3.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-3.jpg", alt="")
+          // Item 4
+          a.col-md-6.col-lg-4.mb-3.photo(href="imgs/portfolio/portfolio-4.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-4.jpg", alt="")
+          // Item 5
+          a.col-md-6.col-lg-4.mb-3.web(href="imgs/portfolio/portfolio-5.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-5.jpg", alt="")
+          // Item 6
+          a.col-md-6.col-lg-4.mb-3.web(href="imgs/portfolio/portfolio-6.jpg")
+            img.p-2.shadow.w-100.h-100.img-thumbnail(src="imgs/portfolio/portfolio-6.jpg", alt="")
+    // ================================== End Portfolios ==================================
+
+    // ================================== Start Contact ==================================
+    section#contact.contact.py-5 
+      .container
+        .text-center
+            span.title-before.text-upeercase.d-inline-block.mb-3.text-danger.px-3.rounded-pill Contact Us
+            h3.display-6
+              | Check Our 
+              span.text-danger Contact Us
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.
+        // Contact information
+        .row.mt-4 
+          .col-lg-6.mb-3(data-aos="flip-up", data-aos-duration="1500")
+            .shadow.py-3.text-center.text-muted
+              i.bi.bi-geo-alt-fill.fs-2.text-danger.rounded-circle.d-inline-block
+              h5.my-3 Our Address 
+              p A108 Adam Street, New York, NY 535022
+          .col-md-6.col-lg-3.mb-3(data-aos="flip-left", data-aos-duration="1000", data-aos-delay="500")
+            .shadow.py-3.text-center.text-muted
+              i.bi.bi-envelope.fs-2.text-danger.rounded-circle.d-inline-block
+              h5.my-3 EMail Us
+              p Contact@example.com
+          .col-md-6.col-lg-3.mb-3(data-aos="flip-right", data-aos-duration="1000", data-aos-delay="500")
+            .shadow.py-3.text-center.text-muted
+              i.bi.bi-telephone.fs-2.text-danger.rounded-circle.d-inline-block
+              h5.my-3 Call Us
+              p +1 5589 55488 55
+        // Maps & form
+        .row.mt-4
+          // Maps
+          .col-lg-6.mb-3(data-aos="zoom-in-left", data-aos-duration="1000")
+            iframe.p-2.border-0.shadow(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204627.6212989493!2d2.999243734516783!3d36.739211507703956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb26977ea659f%3A0x4231102d38a36f49!2sAlger!5e0!3m2!1sfr!2sdz!4v1649861308162!5m2!1sfr!2sdz" ,allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade", width="100%", height="100%")
+          // Contact Form
+          .col-lg-6.mb-3(data-aos="zoom-in-right", data-aos-duration="1000")
+            form.shadow.p-4.needs-validation(action="", novalidate)
+              .row 
+                .col-6.form-floating.my-3
+                  input#inputName.form-control(type="text", placeholder="Your Name", required)
+                  label.text-muted.left-2(for="inputName") Your Name
+                  .invalid-feedback Please Enter Your Name
+                .col-6.form-floating.my-3
+                  input#inputEmail.form-control(type="email", placeholder="Your Email", required)
+                  label.text-muted.left-2(for="inputEmail") Your Email
+                  .invalid-feedback Please Enter Your Email 
+              .form-floating
+                input#inputSubject.form-control(type="text", placeholder="Your Subject", required)
+                label.text-muted.left-2(for="inputSubject") Your Subject
+                .invalid-feedback Please Enter Subject
+              .form-floating.my-3
+                textarea#inputMsg.form-control(rows="5", placeholder="Message", required)
+                label.text-muted.left-2(for="inputMsg") Your Message
+                .invalid-feedback Please Enter Your Message
+              button.btn.btn-danger.mt-3.text-light(type="submit") Send Message
+    // ================================== End Contact ==================================
+
+    //- Include Footer
+    include pug/layout/_footer
+
+
+    
+
+//-
+  ====================================================================================================================
+  In this a block for add Js file for this page
+  ====================================================================================================================
+block script
+  script(src="script/scrollOut.js") 
+  script(src="script/bootstrap.bundle.min.js") 
+  script(src="script/lightGallery.js") 
+  script(src="https://unpkg.com/aos@2.3.1/dist/aos.js") 
+  script(src="script/script.js") 
+  // This line script for live reload plugin
+  script. 
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>')

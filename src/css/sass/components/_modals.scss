@@ -1,0 +1,7 @@
+/*================================= Start Video Modal ===============================*/
+#videoModal {
+  &.fade .modal-dialog { transform: scale(0) }
+  &.show .modal-dialog { transform: none }
+  object { height: 80vh }
+}
+/*================================= End Video Modal ===============================*/

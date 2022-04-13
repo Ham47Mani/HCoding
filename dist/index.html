@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a simple practice for bootstrap 5">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCoding</title>
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/lightGallery.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- ================================== Start Navbar ===================================-->
+    <nav class="navbar navbar-light bg-body navbar-expand-lg py-2 shadow-sm sticky-top" id="navbar">
+      <div class="container">
+        <!-- ========= Start Brand ===================--><a class="navbar-brand text-danger h1 d-flex justify-content-center align-items-center pt-2" href="#"><img class="me-1" src="imgs/logo.png" alt="logo">Coding</a>
+        <!-- ========= Start Nav Toggle ===================-->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarItems"><span class="bi bi-text-right fs-2"></span></button>
+        <!-- ========= Start Nav Items ===================-->
+        <div class="collapse navbar-collapse text-center" id="navbarItems">
+          <ul class="navbar-nav ms-auto fs-6 fw-bold">
+            <li class="nav-item me-3"><a class="nav-link active" href="#header">Home</a></li>
+            <li class="nav-item me-3"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item me-3"><a class="nav-link" href="#skills">Services</a></li>
+            <li class="nav-item me-3 dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#sponssor">Sponssor</a></li>
+                <li><a class="dropdown-item" href="#statistics">Statistics</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+              </ul>
+            </li>
+            <li class="nav-item me-3"><a class="nav-link" href="#portfolios">Portfolios</a></li>
+            <li class="nav-item me-3"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ================================== End Navbar ===================================-->
+    <!-- ================================== Start Header ==================================-->
+    <header class="position-relative" id="header">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="position-relative">
+          <h3 class="display-4" data-aos="fade-right" data-aos-duration="2000">Welcome to <span class="text-danger">HCoding</span></h3>
+          <h6 class="fs-3 text-muted" data-aos="fade-left" data-aos-duration="2000">We are team of talented designers making a websites with boostrap</h6>
+          <div class="btn-group mt-3" data-aos="fade-up" data-aos-duration="2000">
+            <button class="btn btn-danger py-2 px-4 me-3">Get Started</button>
+            <button class="btn btn-outline-danger py-2 px-4 me-3" data-bs-toggle="modal" data-bs-target="#videoModal"> <i class="bi bi-play-circle me-2"></i>Watch video</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ================================== End Header ==================================-->
+    <!-- --- Mixin for add modal video-->
+        <!-- ================================== Start Video Modal ==================================-->
+        <div class="modal fade" id="videoModal"> 
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content"> 
+              <div class="modal-header"> 
+                <p class="modal-title h5">Modal Title </p>
+                <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <object class="w-100" data="https://www.youtube.com/embed/jzSQL6l5Fjc"> </object>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ================================== End Video Modal ==================================-->
+    <!-- ================================== Start About us ==================================-->
+    <section class="bg-section py-5" id="about">
+      <div class="container"> 
+        <div class="text-center"><span class="title-before text-upeercase d-inline-block mb-3 text-danger px-3 rounded-pill">About</span>
+          <h3 class="display-6">Find Out More <span class="text-danger">About Us</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.</p>
+        </div>
+        <div class="row mt-5"> 
+          <div class="col-lg-6 mb-3 mb-lg-0" data-aos="fade-right" data-aos-duration="1000"><img class="img-fluid img-thumbnail" src="imgs/about.jpg" alt="About images"></div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+            <h4>Voluptatem dignissimo provident quasi corporis voluptates sit assumenda.</h4>
+            <p class="mt-3 fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint tempore vitae veniam iure eum magni commodi optio, animi quas.</p>
+            <ul class="list-unstyled mt-5">
+              <li class="d-flex mb-4">
+                <div class="icon-container bg-body shadow d-flex justify-content-center align-items-center rounded-circle flex-shrink-0 img-thumbnail me-3"><i class="bi bi-journal-richtext fs-2 text-danger"></i></div>
+                <div class="text">
+                  <h5>Ullamco laboris nisit ut aliquip consequat </h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum veniam nulla?</p>
+                </div>
+              </li>
+              <li class="d-flex mb-4">
+                <div class="icon-container bg-body shadow d-flex justify-content-center align-items-center rounded-circle flex-shrink-0 img-thumbnail me-3"><i class="bi bi-book fs-2 text-danger"></i></div>
+                <div class="text">
+                  <h5>Ullamco laboris nisit ut aliquip consequat </h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum veniam nulla?</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End About us ==================================-->
+    <!-- ================================== Start Skills ==================================-->
+    <section class="skills py-5" id="skills">
+      <div class="container"> 
+        <div class="row"> 
+          <!-- Progress Bar 1-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>HTML </b><b class="progress-value"> <span>40</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+          <!-- Progress Bar 2-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>CSS</b><b class="progress-value"> <span>50</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+          <!-- Progress Bar 3-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>Javascript</b><b class="progress-value"> <span>60</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+          <!-- Progress Bar 4-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>PHP</b><b class="progress-value"> <span>70</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+          <!-- Progress Bar 5-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>Wordpress</b><b class="progress-value"> <span>80</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+          <!-- Progress Bar 6-->
+          <div class="col-md-6 mb-4">
+            <!-- Progress indicator (Info)-->
+            <div class="progress-info d-flex justify-content-between mb-2"><b>Photoshop</b><b class="progress-value"> <span>90</span>%</b></div>
+            <!-- Progress-->
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemax="100" aria-valuemin="0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Skills ==================================-->
+    <!-- ================================== Start Statistcis ==================================-->
+    <section class="statistics py-5" id="statistics">
+      <div class="container"> 
+        <div class="row"> 
+          <!-- Stat 1-->
+          <div class="col-md-6 col-lg-3 mb-5"> 
+            <div class="bg-section p-5 text-center position-relative">
+              <div class="icon bg-danger d-flex justify-content-center align-items-center position-absolute top-0 start-50 translate-middle rounded-circle"><i class="bi bi-emoji-smile fs-3 text-light"></i></div>
+              <p class="h3" data-counter="110">0</p>
+              <p class="h4">Happy Client</p>
+            </div>
+          </div>
+          <!-- Stat 2-->
+          <div class="col-md-6 col-lg-3 mb-5"> 
+            <div class="bg-section p-5 text-center position-relative">
+              <div class="icon bg-danger d-flex justify-content-center align-items-center position-absolute top-0 start-50 translate-middle rounded-circle"><i class="bi bi-journal-richtext fs-3 text-light"></i></div>
+              <p class="h3" data-counter="120">0</p>
+              <p class="h4">Project</p>
+            </div>
+          </div>
+          <!-- Stat 3-->
+          <div class="col-md-6 col-lg-3 mb-5"> 
+            <div class="bg-section p-5 text-center position-relative">
+              <div class="icon bg-danger d-flex justify-content-center align-items-center position-absolute top-0 start-50 translate-middle rounded-circle"><i class="bi bi-headset fs-3 text-light"></i></div>
+              <p class="h3" data-counter="24">0</p>
+              <p class="h4">Hours Of Support</p>
+            </div>
+          </div>
+          <!-- Stat 4-->
+          <div class="col-md-6 col-lg-3 mb-5"> 
+            <div class="bg-section p-5 text-center position-relative">
+              <div class="icon bg-danger d-flex justify-content-center align-items-center position-absolute top-0 start-50 translate-middle rounded-circle"><i class="bi bi-people fs-3 text-light"></i></div>
+              <p class="h3" data-counter="15">0</p>
+              <p class="h4">Hard Workers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Statistcis ==================================-->
+    <!-- ================================== Start Sponsore ==================================-->
+    <section class="sponsore py-5 bg-section" id="sponssor">
+      <div class="container"> 
+        <div class="row" data-aos="fade-up" data-aos-duration="1500">
+          <!-- Sponsore 1-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-1.png" alt="Client 1"></div>
+          <!-- Sponsore 2-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-2.png" alt="Client 2"></div>
+          <!-- Sponsore 3-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-3.png" alt="Client 3"></div>
+          <!-- Sponsore 4-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-4.png" alt="Client 4"></div>
+          <!-- Sponsore 5-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-5.png" alt="Client 5"></div>
+          <!-- Sponsore 6-->
+          <div class="col-lg-2 col-md-4 col-6 p-5"><img class="img-fluid" src="imgs/clients/client-6.png" alt="Client 6"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Sponsore ==================================-->
+    <!-- ================================== Start Testimonials ==================================-->
+    <section class="testimonials position-relative" id="testimonials">
+      <div class="container">
+        <div class="carousel slide py-5" id="slider" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button class="active" type="button" data-bs-target="#slider" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner h-100">
+            <!-- Testim 1-->
+            <div class="carousel-item h-100 active"> <img class="d-block mx-auto rounded-circle" src="imgs/testimonials/testimonials-1.jpg" alt="Testim 1">
+              <div class="carousel-caption d-none d-md-block"> 
+                <p class="h5">Fisrt Slide Label </p>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <!-- Testim 2-->
+            <div class="carousel-item h-100"><img class="d-block mx-auto rounded-circle" src="imgs/testimonials/testimonials-2.jpg" alt="Testim 2">
+              <div class="carousel-caption d-none d-md-block"> 
+                <p class="h5">Second Slide Label </p>
+                <p>Some representative placeholder content for the Second slide.</p>
+              </div>
+            </div>
+            <!-- Testim 3-->
+            <div class="carousel-item h-100"><img class="d-block mx-auto rounded-circle" src="imgs/testimonials/testimonials-3.jpg" alt="Testim 3">
+              <div class="carousel-caption d-none d-md-block"> 
+                <p class="h5">Third Slide Label </p>
+                <p>Some representative placeholder content for the Third slide.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"> </span><span class="visually-hidden">Privious</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"> </span><span class="visually-hidden">Next</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Testimonials ==================================-->
+    <!-- ================================== Start Portfolios ==================================-->
+    <section class="portfolios py-5" id="portfolios">
+      <div class="container">
+        <div class="text-center"><span class="title-before text-upeercase d-inline-block mb-3 text-danger px-3 rounded-pill">Services</span>
+          <h3 class="display-6">!Check Our Services<span class="text-danger">Services</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.</p>
+        </div>
+        <ul class="list-group list-group-horizontal justify-content-center" data-aos="fade-in" data-aos-duration="1500">
+          <li class="list-group-item active" data-filter="all">All </li>
+          <li class="list-group-item" data-filter="app">App</li>
+          <li class="list-group-item" data-filter="photo">Photo</li>
+          <li class="list-group-item" data-filter="web">Web</li>
+        </ul>
+        <div class="row filter-items mt-4" id="portfoliosGallery">
+          <!-- Item 1--><a class="col-md-6 col-lg-4 mb-3 app" href="imgs/portfolio/portfolio-1.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-1.jpg" alt=""></a>
+          <!-- Item 2--><a class="col-md-6 col-lg-4 mb-3 photo" href="imgs/portfolio/portfolio-2.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-2.jpg" alt=""></a>
+          <!-- Item 3--><a class="col-md-6 col-lg-4 mb-3 app" href="imgs/portfolio/portfolio-3.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-3.jpg" alt=""></a>
+          <!-- Item 4--><a class="col-md-6 col-lg-4 mb-3 photo" href="imgs/portfolio/portfolio-4.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-4.jpg" alt=""></a>
+          <!-- Item 5--><a class="col-md-6 col-lg-4 mb-3 web" href="imgs/portfolio/portfolio-5.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-5.jpg" alt=""></a>
+          <!-- Item 6--><a class="col-md-6 col-lg-4 mb-3 web" href="imgs/portfolio/portfolio-6.jpg"><img class="p-2 shadow w-100 h-100 img-thumbnail" src="imgs/portfolio/portfolio-6.jpg" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Portfolios ==================================-->
+    <!-- ================================== Start Contact ==================================-->
+    <section class="contact py-5" id="contact"> 
+      <div class="container">
+        <div class="text-center"><span class="title-before text-upeercase d-inline-block mb-3 text-danger px-3 rounded-pill">Contact Us</span>
+          <h3 class="display-6">Check Our <span class="text-danger">Contact Us</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eos debitis ea blanditiis autem sapiente temporibus molestias omnis quos rem.</p>
+        </div>
+        <!-- Contact information-->
+        <div class="row mt-4"> 
+          <div class="col-lg-6 mb-3" data-aos="flip-up" data-aos-duration="1500">
+            <div class="shadow py-3 text-center text-muted"><i class="bi bi-geo-alt-fill fs-2 text-danger rounded-circle d-inline-block"></i>
+              <h5 class="my-3">Our Address </h5>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">
+            <div class="shadow py-3 text-center text-muted"><i class="bi bi-envelope fs-2 text-danger rounded-circle d-inline-block"></i>
+              <h5 class="my-3">EMail Us</h5>
+              <p>Contact@example.com</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="500">
+            <div class="shadow py-3 text-center text-muted"><i class="bi bi-telephone fs-2 text-danger rounded-circle d-inline-block"></i>
+              <h5 class="my-3">Call Us</h5>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+        </div>
+        <!-- Maps & form-->
+        <div class="row mt-4">
+          <!-- Maps-->
+          <div class="col-lg-6 mb-3" data-aos="zoom-in-left" data-aos-duration="1000">
+            <iframe class="p-2 border-0 shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204627.6212989493!2d2.999243734516783!3d36.739211507703956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb26977ea659f%3A0x4231102d38a36f49!2sAlger!5e0!3m2!1sfr!2sdz!4v1649861308162!5m2!1sfr!2sdz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%"></iframe>
+          </div>
+          <!-- Contact Form-->
+          <div class="col-lg-6 mb-3" data-aos="zoom-in-right" data-aos-duration="1000">
+            <form class="shadow p-4 needs-validation" action="" novalidate>
+              <div class="row"> 
+                <div class="col-6 form-floating my-3">
+                  <input class="form-control" id="inputName" type="text" placeholder="Your Name" required>
+                  <label class="text-muted left-2" for="inputName">Your Name</label>
+                  <div class="invalid-feedback">Please Enter Your Name</div>
+                </div>
+                <div class="col-6 form-floating my-3">
+                  <input class="form-control" id="inputEmail" type="email" placeholder="Your Email" required>
+                  <label class="text-muted left-2" for="inputEmail">Your Email</label>
+                  <div class="invalid-feedback">Please Enter Your Email </div>
+                </div>
+              </div>
+              <div class="form-floating">
+                <input class="form-control" id="inputSubject" type="text" placeholder="Your Subject" required>
+                <label class="text-muted left-2" for="inputSubject">Your Subject</label>
+                <div class="invalid-feedback">Please Enter Subject</div>
+              </div>
+              <div class="form-floating my-3">
+                <textarea class="form-control" id="inputMsg" rows="5" placeholder="Message" required></textarea>
+                <label class="text-muted left-2" for="inputMsg">Your Message</label>
+                <div class="invalid-feedback">Please Enter Your Message</div>
+              </div>
+              <button class="btn btn-danger mt-3 text-light" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================================== End Contact ==================================-->
+    <!-- ================================== Start Footer ==================================-->
+    <footer class="py-5 bg-section">
+      <div class="container"> 
+        <div class="row"> 
+          <div class="col-md-6 col-lg-3 mb-3 d-lg-flex justify-content-center"> 
+            <div class="info text-muted">
+              <h4 class="text-danger">HCoding</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil nisi atque tempore harum molestiae.</p>
+              <p><b>Email:</b> Info@example.com</p>
+              <p><b>Phone:</b> +111 22 333 4444</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 d-lg-flex justify-content-center">
+            <div class="link text-muted"> 
+              <h6 class="text-dark">Useful Links</h6>
+              <ul class="list-unstyled ps-3 footer-list">
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 d-lg-flex justify-content-center">
+            <div class="link text-muted"> 
+              <h6 class="text-dark">Useful Links</h6>
+              <ul class="list-unstyled ps-3 footer-list">
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+                <li class="lh-lg position-relative">Home </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 d-lg-flex justify-content-center">
+            <div class="link text-muted"> 
+              <h6 class="text-dark">Our Social NEtworks</h6>
+              <p>Gras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+              <div class="social"><a class="bi bi-linkedin me-1 fs-2 p-2" href="#"></a><a class="bi bi-twitter me-1 fs-2 p-2" href="#"></a><a class="bi bi-facebook me-1 fs-2 p-2" href="#"></a><a class="bi bi-instagram me-1 fs-2 p-2" href="#"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================================== End Footer ==================================-->
+    <script src="script/scrollOut.js"> </script>
+    <script src="script/bootstrap.bundle.min.js"> </script>
+    <script src="script/lightGallery.js"> </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script src="script/script.js"> </script>
+    <!-- This line script for live reload plugin-->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>

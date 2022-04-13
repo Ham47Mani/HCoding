@@ -1,0 +1,31 @@
+// ================================== Start Navbar ===================================
+nav#navbar.navbar.navbar-light.bg-body.navbar-expand-lg.py-2.shadow-sm.sticky-top
+  .container
+    // ========= Start Brand ===================
+    a.navbar-brand.text-danger.h1.d-flex.justify-content-center.align-items-center.pt-2(href="#")
+      img.me-1(src="imgs/logo.png", alt="logo")
+      | Coding
+
+    // ========= Start Nav Toggle ===================
+    button.navbar-toggler(data-bs-toggle="collapse" data-bs-target="#navbarItems")
+      span.bi.bi-text-right.fs-2
+    // ========= Start Nav Items ===================
+    #navbarItems.collapse.navbar-collapse.text-center
+      ul.navbar-nav.ms-auto.fs-6.fw-bold
+        li.nav-item.me-3: a.nav-link.active(href="#header") Home
+        li.nav-item.me-3: a.nav-link(href="#about") About
+        li.nav-item.me-3: a.nav-link(href="#skills") Services
+        //- Dropdown menu
+        li.nav-item.me-3.dropdown
+          a.nav-link.dropdown-toggle(href="#" data-bs-toggle="dropdown") Dropdown
+          ul.dropdown-menu
+            li: a.dropdown-item(href = "#sponssor") Sponssor
+            li: a.dropdown-item(href = "#statistics") Statistics
+            //- Add Separater in drop down menu
+            li: hr.dropdown-divider
+            li: a.dropdown-item(href = "#testimonials") Testimonials
+        li.nav-item.me-3: a.nav-link(href="#portfolios") Portfolios
+        li.nav-item.me-3: a.nav-link(href="#contact") Contact
+
+
+// ================================== End Navbar ===================================

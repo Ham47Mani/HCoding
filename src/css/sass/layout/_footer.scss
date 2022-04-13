@@ -1,0 +1,16 @@
+/*---------- Include Variables ----------*/
+@import "sass/helpers/_helpers";
+
+/*================================ Start Footer =============================*/
+footer {
+  .footer-list li:before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-left-color: $red;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/*================================ End Footer =============================*/
